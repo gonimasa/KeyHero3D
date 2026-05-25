@@ -147,3 +147,91 @@ footer{background:var(--negro);border-top:1px solid var(--borde);padding:40px 60
 
 /* TOAST */
 .toast{position:fixed;bottom:30px;left:50%;transform:translateX(-50%);background:var(--verde);color:var(--negro);padding:14px 28px;font-family:'Inter',sans-serif;font-weight:700;font-size:.9rem;letter-spacing:1px;z-index:999;transition:opacity .5s;white-space:nowrap}
+
+/* ================================
+   RESPONSIVE PARA CELULAR
+================================ */
+@media (max-width: 1024px) {
+  .hero{grid-template-columns:1fr;text-align:center;padding:60px 40px}
+  .hero-desc{margin-left:auto;margin-right:auto}
+  .hero-botones{justify-content:center}
+  .hero-stats{justify-content:center}
+  .productos-grid{grid-template-columns:repeat(2,1fr)}
+  .nosotros{grid-template-columns:1fr}
+  .contacto{grid-template-columns:1fr;gap:40px}
+  .hero-img-grid{grid-template-columns:repeat(3,120px);gap:8px;justify-content:center}
+  .hero-grid-img{width:120px;height:120px}
+}
+
+@media (max-width: 768px) {
+  header{padding:15px 20px}
+  nav{flex-wrap:wrap;justify-content:center;gap:12px}
+  nav ul{gap:15px;flex-wrap:wrap;justify-content:center}
+  .hero{padding:40px 20px}
+  .hero h1{font-size:2.5rem}
+  .hero-tag{font-size:.65rem}
+  .hero-desc{font-size:.85rem}
+  .hero-botones{flex-direction:column;gap:12px}
+  .btn-primary,.btn-secondary{padding:10px 20px;font-size:.75rem}
+  .hero-stats{gap:12px;flex-wrap:wrap}
+  .stat-num{font-size:1.2rem}
+  .stat-label{font-size:.55rem}
+  .stat-divider{height:30px}
+  .hero-img-grid{grid-template-columns:repeat(3,90px);gap:6px}
+  .hero-grid-img{width:90px;height:90px}
+  .productos{padding:60px 20px}
+  .productos-grid{grid-template-columns:1fr;gap:16px}
+  .section-header h2{font-size:2rem}
+  .section-header{margin-bottom:30px}
+  .section-sub{font-size:.85rem}
+  .producto-card{max-width:100%}
+  .producto-img{height:180px}
+  .producto-info{padding:16px}
+  .producto-info h3{font-size:1.2rem}
+  .producto-desc{font-size:.75rem}
+  .producto-precio{font-size:1rem}
+  .btn-agregar{padding:6px 12px;font-size:.7rem}
+  .nosotros-visual{padding:40px 20px}
+  .nosotros-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:0}
+  .ns-item{padding:16px 0}
+  .ns-num{font-size:2.5rem}
+  .ns-tag{font-size:1.2rem}
+  .nosotros-contenido{padding:40px 20px}
+  .nosotros-contenido h2{font-size:1.8rem}
+  .nosotros-desc{font-size:.85rem}
+  .features li{font-size:.85rem}
+  .proceso{padding:60px 20px}
+  .paso{flex-direction:column;gap:12px;text-align:center}
+  .paso-num{margin:0 auto}
+  .paso-info h4{font-size:1.1rem}
+  .paso-info p{font-size:.8rem}
+  .contacto{padding:60px 20px}
+  .contacto h2{font-size:2rem}
+  .contacto-desc{font-size:.85rem}
+  .contacto-icono{width:40px;height:40px}
+  .icono-img{width:22px;height:22px}
+  .contacto-datos li{font-size:.8rem}
+  .contacto-datos li:hover{transform:translateX(5px)}
+  .form-grupo input,.form-grupo textarea{padding:10px 14px;font-size:.85rem}
+  footer{padding:30px 20px;flex-direction:column;text-align:center;gap:12px}
+  .footer-logo{font-size:1.2rem}
+  .footer-copy{font-size:.7rem}
+  .footer-links{gap:16px}
+  .footer-links a{font-size:.65rem}
+  .carrito-panel{width:100%;right:-100%}
+  .carrito-item{flex-wrap:wrap;gap:10px}
+  .carrito-item-subtotal{min-width:auto}
+  .toast{white-space:normal;text-align:center;max-width:90%;font-size:.8rem;padding:10px 16px}
+}
+
+@media (max-width: 480px) {
+  .hero h1{font-size:1.8rem}
+  .hero-img-grid{grid-template-columns:repeat(3,70px);gap:5px}
+  .hero-grid-img{width:70px;height:70px}
+  .producto-precio{font-size:.9rem}
+  .btn-agregar{padding:5px 10px;font-size:.65rem}
+  .contacto-icono{width:36px;height:36px}
+  .carrito-acciones{flex-direction:column}
+  .carrito-acciones .btn-vaciar,.carrito-acciones .btn-primary{width:100%;text-align:center}
+  .carrito-footer{padding:15px}
+}
