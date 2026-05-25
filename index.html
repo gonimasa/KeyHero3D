@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KeyHero 3D</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" type="image/png" href="img/3d.jpg.png">
+</head>
+<body>
+
+<header id="inicio">
+  <nav>
+    <div class="logo">KeyHero <span>3D</span></div>
+    <ul>
+      <li><a href="#productos">Productos</a></li>
+      <li><a href="#nosotros">Nosotros</a></li>
+      <li><a href="#proceso">Proceso</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+    <div class="carrito-btn" id="carritoBtn">
+      🛒 <span class="carrito-count" id="carritoCount">0</span>
+    </div>
+  </nav>
+</header>
+
+<div class="carrito-panel" id="carritoPanel">
+  <div class="carrito-header">
+    <h3>TU CARRITO</h3>
+    <button class="carrito-cerrar" id="carritoCerrar">✕</button>
+  </div>
+  <div class="carrito-items" id="carritoItems">
+    <p class="carrito-vacio">Tu carrito está vacío.</p>
+  </div>
+  <div class="carrito-footer">
+    <div class="carrito-total">
+      <span>TOTAL</span>
+      <span id="carritoTotal">$0 ARS</span>
+    </div>
+    <div class="carrito-acciones">
+    <button class="btn-vaciar" id="vaciarCarrito">🗑️ </button>
+      <button class="btn-primary" style="flex:1" id="finalizarPedidoBtn">Finalizar Pedido</button>
+    </div>
+  </div>
+</div>
+<div class="carrito-overlay" id="carritoOverlay"></div>
+
+<section class="hero">
+  <div class="hero-contenido">
+    <p class="hero-tag">✦ Impresión 3D Artesanal · Concepción, Tucumán</p>
+    <h1>HÉROES EN TU <span>LLAVERO</span></h1>
+    <p class="hero-desc">Llaveros únicos de tus personajes favoritos, impresos en 3D con filamento PLA de alta calidad. Cada pieza es fabricada a pedido.</p>
+    <div class="hero-botones">
+      <a href="#productos" class="btn-primary">Ver Catálogo</a>
+      <a href="#nosotros" class="btn-secondary">Cómo Funciona</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><span class="stat-num">6+</span><span class="stat-label">Modelos</span></div>
+      <div class="stat-divider"></div>
+      <div class="stat"><span class="stat-num">PLA</span><span class="stat-label">Material</span></div>
+      <div class="stat-divider"></div>
+      <div class="stat"><span class="stat-num">3D</span><span class="stat-label">Impresión</span></div>
+    </div>
+  </div>
+<div class="hero-visual">
+  <div class="hero-img-grid">
+    <img src="img/llaveros-normales.jpg.jpg" alt="Superman" class="hero-grid-img">
+    <img src="img/llaveros-3.jpg.jpg" alt="Iron Man" class="hero-grid-img">
+    <img src="img/arturito.jpg.jpg" alt="Darth Vader" class="hero-grid-img">
+    <img src="img/colgante.jpg.jpg" alt="Spider-Man" class="hero-grid-img">
+    <img src="img/a.jpg.jpg"Batman" class="hero-grid-img">
+    <img src="img/llaveros-muchos.jpg.jpg" alt="Yoda" class="hero-grid-img">
+  </div>
+</div>
+</section>
+
+<section class="productos" id="productos">
+  <div class="section-header">
+    <p class="section-tag">✦ Catálogo</p>
+    <h2>NUESTROS LLAVEROS</h2>
+    <p class="section-sub">Cada unidad es modelada digitalmente e impresa en PLA con nuestra impresora 3D.</p>
+  </div>
+<div class="productos-grid">
+  <!-- Superman -->
+  <div class="producto-card" data-nombre="Superman" data-precio="2500">
+    <div class="producto-img">
+      <img src="img/super.jpg.png" alt="Superman" class="producto-foto">
+    </div>
+    <div class="producto-info">
+      <p class="producto-universo">DC Comics</p>
+      <h3>Superman</h3>
+      <p class="producto-desc">El hombre de acero en tu llavero. Diseño con el icónico escudo en relieve.</p>
+      <div class="producto-footer">
+        <span class="producto-precio">$2.500 ARS</span>
+        <button class="btn-agregar">+ Agregar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Iron Man -->
+  <div class="producto-card" data-nombre="Iron Man" data-precio="3500">
+    <div class="producto-img">
+      <img src="img/Iron-Man,jpg.jpg" alt="Iron Man" class="producto-foto">
+    </div>
+    <div class="producto-info">
+      <p class="producto-universo">Marvel</p>
+      <h3>Iron Man</h3>
+      <p class="producto-desc">El casco del genio millonario Tony Stark con detalles estructurales únicos.</p>
+      <div class="producto-footer">
+        <span class="producto-precio">$3.500 ARS</span>
+        <button class="btn-agregar">+ Agregar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Darth Vader -->
+  <div class="producto-card" data-nombre="Darth Vader" data-precio="3200">
+    <div class="producto-img">
+      <img src="img/darth-vader.jpg.jpg" alt="Darth Vader" class="producto-foto">
+    </div>
+    <div class="producto-info">
+      <p class="producto-universo">Star Wars</p>
+      <h3>Darth Vader</h3>
+      <p class="producto-desc">El señor oscuro de los Sith en miniatura. Con sable de luz incorporado.</p>
+      <div class="producto-footer">
+        <span class="producto-precio">$3.200 ARS</span>
+        <button class="btn-agregar">+ Agregar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Spider-Man -->
+  <div class="producto-card" data-nombre="Spider-Man" data-precio="3500">
+    <div class="producto-img">
+      <img src="img/hombre-araña.jpg.png" alt="Spider-Man" class="producto-foto">
+    </div>
+    <div class="producto-info">
+      <p class="producto-universo">Marvel</p>
+      <h3>Spider-Man</h3>
+      <p class="producto-desc">Tu amigable vecino araña con diseño de tela de araña en la superficie.</p>
+      <div class="producto-footer">
+        <span class="producto-precio">$3.500 ARS</span>
+        <button class="btn-agregar">+ Agregar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Batman -->
+  <div class="producto-card" data-nombre="Batman" data-precio="2800">
+    <div class="producto-img">
+      <img src="img/batman.jpg.jpg" alt="Batman" class="producto-foto">
+    </div>
+    <div class="producto-info">
+      <p class="producto-universo">DC Comics</p>
+      <h3>Batman</h3>
+      <p class="producto-desc">El caballero oscuro de Gotham. Silueta icónica del murciélago en relieve.</p>
+      <div class="producto-footer">
+        <span class="producto-precio">$2.800 ARS</span>
+        <button class="btn-agregar">+ Agregar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Yoda -->
+  <div class="producto-card" data-nombre="Yoda" data-precio="3800">
+    <div class="producto-img">
+      <img src="img/babyyoda.jpg.jpg" alt="Yoda" class="producto-foto">
+    </div>
+    <div class="producto-info">
+      <p class="producto-universo">Star Wars</p>
+      <h3>baby yoda</h3>
+      <p class="producto-desc">El maestro Jedi más sabio de la galaxia. Orejas largas y ojos expresivos.</p>
+      <div class="producto-footer">
+        <span class="producto-precio">$3.800 ARS</span>
+        <button class="btn-agregar">+ Agregar</button>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="nosotros" id="nosotros">
+  <div class="nosotros-visual">
+    <div class="nosotros-stats">
+      <div class="ns-item"><span class="ns-num">6</span><span class="ns-label">Modelos disponibles</span></div>
+      <div class="ns-divider"></div>
+      <div class="ns-item"><span class="ns-num">PLA</span><span class="ns-label">Material ecológico</span></div>
+      <div class="ns-divider"></div>
+      <div class="ns-item"><span class="ns-num">3D</span><span class="ns-label">Tecnología aditiva</span></div>
+      <div class="ns-divider"></div>
+      <div class="ns-item"><span class="ns-num">5</span><span class="ns-label">Integrantes del equipo</span></div>
+      <div class="ns-divider"></div>
+      <div class="ns-item ns-badge"><span class="ns-tag">✦ KEYHERO 3D</span><span class="ns-sub">Concepción · Tucumán</span></div>
+    </div>
+  </div>
+  <div class="nosotros-contenido">
+    <p class="section-tag">✦ Quiénes somos</p>
+    <h2>PASIÓN POR LA<br>IMPRESIÓN 3D</h2>
+    <p class="nosotros-desc">Somos un emprendimiento joven que nació de la pasión por la tecnología y los personajes que nos acompañaron toda la vida.</p>
+    <p class="nosotros-desc">Cada llavero es diseñado digitalmente y fabricado con nuestra impresora 3D, garantizando un producto único y de calidad.</p>
+    <ul class="features"><li>✅ Filamento PLA ecológico y duradero</li><li>✅ Diseños en 3D con Tinkercad</li><li>✅ Fabricación artesanal bajo pedido</li><li>✅ Envíos a todo el país</li></ul>
+  </div>
+</section>
+
+<section class="proceso" id="proceso">
+  <div class="section-header" style="text-align:center; margin-bottom:60px;">
+    <p class="section-tag">✦ Nuestro Proceso</p>
+    <h2>CÓMO HACEMOS CADA LLAVERO</h2>
+    <p class="section-sub">Aplicamos metodología Kaizen y 5S en cada etapa de fabricación.</p>
+  </div>
+  <div class="proceso-steps">
+    <div class="paso"><div class="paso-num">01</div><div class="paso-info"><h4>INVESTIGACIÓN</h4><p>Analizamos las necesidades del proyecto y seleccionamos materiales óptimos (filamento PLA).</p></div></div>
+    <div class="paso"><div class="paso-num">02</div><div class="paso-info"><h4>DISEÑO 3D</h4><p>Modelamos cada llavero en Tinkercad, ajustando medidas, detalles y tolerancias de impresión.</p></div></div>
+    <div class="paso"><div class="paso-num">03</div><div class="paso-info"><h4>FABRICACIÓN</h4><p>Configuramos temperatura, altura de capa y relleno. Imprimimos y corregimos errores en tiempo real.</p></div></div>
+    <div class="paso"><div class="paso-num">04</div><div class="paso-info"><h4>MEJORA CONTINUA</h4><p>Aplicamos Kaizen: registramos cada problema detectado y la mejora aplicada para el siguiente ciclo.</p></div></div>
+    <div class="paso"><div class="paso-num">05</div><div class="paso-info"><h4>CONTROL DE CALIDAD</h4><p>Aplicamos las 5S (Clasificar, Ordenar, Limpiar, Estandarizar, Disciplina) en nuestro espacio de trabajo.</p></div></div>
+  </div>
+</section>
+
+<section class="contacto" id="contacto">
+  <div class="contacto-info">
+    <p class="section-tag">✦ Contacto</p>
+    <h2>HABLEMOS</h2>
+    <p class="contacto-desc">¿Querés un diseño personalizado o tenés alguna consulta? Escribinos y te respondemos en menos de 24 horas.</p>
+    <ul class="contacto-datos">
+      <li>
+        <div class="contacto-icono">
+          <img src="img/mail.jpg.png" alt="Email" class="icono-img">
+        </div>
+        <span>keyhero3d@gmail.com</span>
+      </li>
+      <li>
+        <div class="contacto-icono">
+          <img src="img/contacto-jpg.png" alt="Teléfono" class="icono-img">
+        </div>
+        <span>+54 11 1234-5678</span>
+      </li>
+      <li>
+        <div class="contacto-icono">
+          <img src="img/maps.jpg.png" alt="Ubicación" class="icono-img">
+        </div>
+        <span>Concepción, Tucumán</span>
+      </li>
+    </ul>
+  </div>
+  <div class="contacto-form">
+    <div class="form-grupo"><input type="text" id="inputNombre" placeholder="Tu nombre"></div>
+    <div class="form-grupo"><input type="email" id="inputEmail" placeholder="Tu email"></div>
+    <div class="form-grupo"><input type="text" placeholder="¿Qué personaje te interesa?"></div>
+    <div class="form-grupo"><textarea rows="5" placeholder="Tu mensaje..."></textarea></div>
+    <button class="btn-primary" id="btnEnviar" style="width:100%">Enviar Mensaje</button>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo">KeyHero <span>3D</span></div>
+  <p class="footer-copy">© 2025 KeyHero 3D — Proyecto Académico · Tecnicatura Superior en Computación y Redes</p>
+  <ul class="footer-links">
+    <li><a href="#productos">Productos</a></li>
+    <li><a href="#nosotros">Nosotros</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+  </ul>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

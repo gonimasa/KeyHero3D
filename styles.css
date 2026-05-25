@@ -1,0 +1,149 @@
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--verde:#00e676;--negro:#0a0a0a;--gris-card:#1e1e1e;--gris-header:#111111;--borde:#2a2a2a;--texto:#f5f5f5;--texto-muted:#888;--texto-dark:#444}
+body{background:var(--negro);color:var(--texto);font-family:'Inter',Arial,sans-serif}
+h1,h2,h3,h4,.logo,.footer-logo{font-family:'Bebas Neue',Arial,sans-serif;letter-spacing:1px}
+
+/* HEADER */
+header{background:var(--gris-header);border-bottom:2px solid var(--verde);padding:20px 60px;position:sticky;top:0;z-index:100}
+nav{display:flex;justify-content:space-between;align-items:center;gap:20px}
+.logo{font-size:1.8rem;font-weight:700;color:var(--texto);letter-spacing:2px}
+.logo span{color:var(--verde)}
+nav ul{list-style:none;display:flex;gap:30px}
+nav ul a{text-decoration:none;color:var(--texto);font-size:.9rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;transition:color .3s;cursor:pointer}
+nav ul a:hover{color:var(--verde)}
+
+/* CARRITO BTN */
+.carrito-btn{background:var(--gris-card);border:1px solid var(--borde);color:var(--texto);padding:10px 18px;font-size:1rem;cursor:pointer;display:flex;align-items:center;gap:8px;transition:border-color .2s;white-space:nowrap}
+.carrito-btn:hover{border-color:var(--verde)}
+.carrito-count{background:var(--verde);color:var(--negro);width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700}
+
+/* PANEL CARRITO */
+.carrito-panel{position:fixed;top:0;right:-420px;width:380px;height:100vh;background:var(--gris-header);border-left:1px solid var(--borde);z-index:200;transition:right .3s;display:flex;flex-direction:column}
+.carrito-panel.abierto{right:0}
+.carrito-overlay{position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:199;display:none}
+.carrito-overlay.visible{display:block}
+.carrito-header{display:flex;justify-content:space-between;align-items:center;padding:24px;border-bottom:1px solid var(--borde)}
+.carrito-header h3{font-family:'Bebas Neue',sans-serif;font-size:1.4rem;letter-spacing:2px}
+.carrito-cerrar{background:0 0;border:1px solid var(--borde);color:var(--texto);width:36px;height:36px;cursor:pointer;font-size:1rem;transition:border-color .2s}
+.carrito-cerrar:hover{border-color:var(--verde);color:var(--verde)}
+.carrito-items{flex:1;overflow-y:auto;padding:20px;display:flex;flex-direction:column;gap:12px}
+.carrito-vacio{color:var(--texto-muted);font-size:.9rem;text-align:center;margin-top:40px}
+.carrito-vacio-box{text-align:center;padding:40px 20px}
+.carrito-vacio-img{width:100px;height:auto;margin-bottom:16px;opacity:.7}
+.carrito-item{display:flex;justify-content:space-between;align-items:center;background:var(--gris-card);border:1px solid var(--borde);padding:14px 16px;font-size:.9rem}
+.carrito-item-nombre{font-weight:600;text-transform:uppercase;font-size:.85rem}
+.carrito-item-precio{color:var(--verde);font-weight:700}
+.carrito-item-quitar{background:0 0;border:none;color:var(--texto-dark);cursor:pointer;font-size:1rem;padding:0 4px;transition:color .2s}
+.carrito-item-quitar:hover{color:#ff5252}
+.carrito-footer{padding:20px 24px;border-top:1px solid var(--borde);display:flex;flex-direction:column;gap:16px}
+.carrito-total{display:flex;justify-content:space-between;font-size:1.1rem;font-weight:700}
+.carrito-total span:last-child{color:var(--verde)}
+.carrito-acciones{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.btn-vaciar{background:0 0;border:1px solid #ff5252;color:#ff5252;padding:10px 16px;font-family:'Inter',sans-serif;font-size:.8rem;font-weight:600;text-transform:uppercase;cursor:pointer;transition:all .3s}
+.btn-vaciar:hover{background:#ff5252;color:var(--negro)}
+
+/* BOTONES GENERALES */
+.btn-primary{background:var(--verde);color:var(--negro);padding:14px 32px;font-family:'Inter',sans-serif;font-weight:700;font-size:.85rem;letter-spacing:2px;text-transform:uppercase;text-decoration:none;border:none;cursor:pointer;transition:transform .2s,box-shadow .2s}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,230,118,.35)}
+.btn-secondary{background:0 0;color:var(--texto);padding:14px 32px;font-family:'Inter',sans-serif;font-weight:600;font-size:.85rem;letter-spacing:2px;text-transform:uppercase;text-decoration:none;border:1px solid var(--borde);cursor:pointer;transition:border-color .2s,color .2s}
+.btn-secondary:hover{border-color:var(--verde);color:var(--verde)}
+
+/* HERO */
+.hero{min-height:90vh;display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:80px 60px;background:var(--negro);border-bottom:1px solid var(--borde);gap:60px}
+.hero-tag{color:var(--verde);font-size:.75rem;letter-spacing:3px;text-transform:uppercase;margin-bottom:20px}
+.hero h1{font-size:5rem;font-weight:900;line-height:1;margin-bottom:24px;text-transform:uppercase}
+.hero h1 span{color:var(--verde)}
+.hero-desc{font-size:1rem;color:var(--texto-muted);line-height:1.7;max-width:480px;margin-bottom:36px}
+.hero-botones{display:flex;gap:16px;margin-bottom:48px}
+.hero-stats{display:flex;align-items:center;gap:24px}
+.stat-num{display:block;font-family:'Bebas Neue',sans-serif;font-size:1.8rem;color:var(--verde);line-height:1}
+.stat-label{display:block;font-size:.65rem;letter-spacing:2px;text-transform:uppercase;color:var(--texto-muted);margin-top:2px}
+.stat-divider{width:1px;height:40px;background:var(--borde)}
+.hero-visual{display:flex;align-items:center;justify-content:center}
+.hero-emoji-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.hero-emoji-grid span{width:110px;height:110px;background:var(--gris-card);border:1px solid var(--borde);display:flex;align-items:center;justify-content:center;font-size:3.5rem;transition:border-color .3s,transform .3s}
+.hero-emoji-grid span:hover{border-color:var(--verde);transform:scale(1.05)}
+.hero-img-grid{display:grid;grid-template-columns:repeat(3,150px);gap:10px}
+.hero-grid-img{width:150px;height:150px;object-fit:cover;object-position:center 25%;border:1px solid var(--borde);transition:border-color .3s,transform .3s}
+.hero-grid-img:hover{border-color:var(--verde);transform:scale(1.05)}
+
+/* PRODUCTOS */
+.productos{padding:100px 60px;background:var(--negro)}
+.section-header{margin-bottom:60px}
+.section-tag{color:var(--verde);font-size:.72rem;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+.section-header h2{font-size:3rem;text-transform:uppercase;margin-bottom:12px}
+.section-sub{color:var(--texto-muted);font-size:.95rem;line-height:1.6;max-width:520px}
+.productos-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.producto-card{background:var(--gris-card);border:1px solid var(--borde);transition:transform .3s,border-color .3s}
+.producto-card:hover{transform:translateY(-6px);border-color:var(--verde)}
+.producto-img{height:220px;background:var(--gris-header);display:flex;align-items:center;justify-content:center;font-size:5.5rem;overflow:hidden}
+.producto-foto{width:100%;height:220px;object-fit:contain;object-position:center;transition:transform .5s;padding:12px}
+.producto-card:hover .producto-foto{transform:scale(1.07)}
+.foto-superman,.foto-ironman,.foto-vader,.foto-batman,.foto-yoda{padding:8px}
+.foto-spiderman{padding:4px}
+.producto-info{padding:24px}
+.producto-universo{color:var(--verde);font-size:.65rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:6px}
+.producto-info h3{font-size:1.5rem;text-transform:uppercase;margin-bottom:10px}
+.producto-desc{font-size:.85rem;color:#666;line-height:1.6;margin-bottom:20px}
+.producto-footer{display:flex;justify-content:space-between;align-items:center}
+.producto-precio{font-size:1.2rem;font-weight:700;color:var(--verde);font-family:'Bebas Neue',sans-serif;letter-spacing:1px}
+.btn-agregar{background:var(--verde);color:var(--negro);border:none;padding:10px 18px;font-family:'Inter',sans-serif;font-weight:700;font-size:.8rem;letter-spacing:1px;text-transform:uppercase;cursor:pointer;transition:transform .2s,box-shadow .2s}
+.btn-agregar:hover{transform:translateY(-2px);box-shadow:0 4px 12px rgba(0,230,118,.3)}
+
+/* NOSOTROS */
+.nosotros{display:grid;grid-template-columns:1fr 1fr;min-height:500px;border-top:1px solid var(--borde);border-bottom:1px solid var(--borde)}
+.nosotros-visual{background:var(--negro);border-right:1px solid var(--borde);display:flex;align-items:center;justify-content:center;padding:60px 40px}
+.nosotros-stats{display:flex;flex-direction:column;width:100%}
+.ns-item{padding:24px 0}
+.ns-num{font-family:'Bebas Neue',sans-serif;font-size:4rem;color:var(--verde);line-height:1}
+.ns-label{font-size:.72rem;letter-spacing:2px;text-transform:uppercase;color:var(--texto-muted);margin-top:4px}
+.ns-divider{width:100%;height:1px;background:var(--borde)}
+.ns-badge{margin-top:8px}
+.ns-tag{font-family:'Bebas Neue',sans-serif;font-size:1.6rem;color:var(--texto);letter-spacing:3px}
+.ns-sub{font-size:.72rem;letter-spacing:2px;text-transform:uppercase;color:var(--texto-dark);margin-top:4px}
+.nosotros-contenido{background:var(--gris-card);padding:80px 60px;display:flex;flex-direction:column;justify-content:center}
+.nosotros-contenido h2{font-size:2.5rem;text-transform:uppercase;margin-bottom:24px;line-height:1.1}
+.nosotros-desc{font-size:.95rem;color:var(--texto-muted);line-height:1.8;margin-bottom:16px}
+.features{list-style:none;display:flex;flex-direction:column;gap:12px;margin-top:24px}
+.features li{font-size:.95rem;color:var(--texto)}
+
+/* PROCESO */
+.proceso{padding:100px 60px;background:var(--gris-header);border-bottom:1px solid var(--borde)}
+.proceso-steps{display:flex;flex-direction:column;max-width:800px;margin:0 auto}
+.paso{display:flex;align-items:flex-start;gap:32px;padding:32px 0;border-bottom:1px solid var(--borde)}
+.paso:last-child{border-bottom:none}
+.paso-num{font-family:'Bebas Neue',sans-serif;font-size:3rem;color:var(--verde);line-height:1;min-width:64px;opacity:.6}
+.paso-info h4{font-family:'Bebas Neue',sans-serif;font-size:1.3rem;letter-spacing:2px;margin-bottom:8px}
+.paso-info p{font-size:.9rem;color:var(--texto-muted);line-height:1.7}
+
+/* CONTACTO */
+.contacto{display:grid;grid-template-columns:1fr 1fr;gap:80px;padding:100px 60px;background:var(--negro)}
+.contacto h2{font-size:3rem;text-transform:uppercase;margin-bottom:16px}
+.contacto-desc{color:var(--texto-muted);line-height:1.7;margin-bottom:40px;font-size:.95rem}
+
+/* CONTACTO CON IMÁGENES Y HOVER */
+.contacto-datos{list-style:none;display:flex;flex-direction:column;gap:20px}
+.contacto-datos li{display:flex;align-items:center;gap:16px;font-size:.9rem;color:var(--texto-muted);transition:all .3s ease;cursor:pointer;padding:12px 0}
+.contacto-datos li:hover{transform:translateX(10px);color:var(--verde)}
+.contacto-icono{width:48px;height:48px;border:1px solid var(--borde);border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;background-color:var(--gris-card);transition:all .3s ease}
+.icono-img{width:28px;height:28px;object-fit:contain;transition:all .3s ease}
+.contacto-datos li:hover .contacto-icono{border-color:var(--verde);transform:scale(1.1);background-color:var(--verde)}
+.contacto-datos li:hover .icono-img{filter:brightness(0) invert(1)}
+
+/* FORMULARIO */
+.form-grupo{margin-bottom:14px}
+.form-grupo input,.form-grupo textarea{width:100%;background:var(--gris-card);border:1px solid var(--borde);color:var(--texto);padding:14px 18px;font-family:'Inter',Arial,sans-serif;font-size:.9rem;outline:0;resize:none;transition:border-color .3s}
+.form-grupo input:focus,.form-grupo textarea:focus{border-color:var(--verde)}
+.form-grupo input::placeholder,.form-grupo textarea::placeholder{color:#444}
+
+/* FOOTER */
+footer{background:var(--negro);border-top:1px solid var(--borde);padding:40px 60px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+.footer-logo{font-size:1.5rem;letter-spacing:2px;color:var(--texto)}
+.footer-logo span{color:var(--verde)}
+.footer-copy{font-size:.78rem;color:var(--texto-dark);text-align:center}
+.footer-links{list-style:none;display:flex;gap:24px}
+.footer-links a{text-decoration:none;color:var(--texto-dark);font-size:.75rem;letter-spacing:1px;text-transform:uppercase;transition:color .2s;cursor:pointer}
+.footer-links a:hover{color:var(--verde)}
+
+/* TOAST */
+.toast{position:fixed;bottom:30px;left:50%;transform:translateX(-50%);background:var(--verde);color:var(--negro);padding:14px 28px;font-family:'Inter',sans-serif;font-weight:700;font-size:.9rem;letter-spacing:1px;z-index:999;transition:opacity .5s;white-space:nowrap}
